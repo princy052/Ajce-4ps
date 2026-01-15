@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Mix Case Study | Amal Jyothi College of Engineering</title>
+
+<link rel="icon" href="https://www.amaljyothi.ac.in/wp-content/uploads/2019/07/cropped-AJCE-Logo-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b1020;
+    --surface:#131a33;
+    --card:#1b2450;
+    --primary:#5eead4;     /* cyan */
+    --secondary:#a78bfa;   /* violet */
+    --accent:#38bdf8;      /* sky blue */
+    --text:#eef2ff;
+    --muted:#a5b4fc;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+      radial-gradient(circle at top, #121a3a, var(--bg));
+    color:var(--text);
+    line-height:1.8;
+}
+
+/* HEADER */
+header{
+    background:
+    linear-gradient(135deg, rgba(11,16,32,.88), rgba(19,26,51,.88)),
+    url('https://www.amaljyothi.ac.in/wp-content/uploads/2023/05/ajce-campus.jpg');
+    background-size:cover;
+    background-position:center;
+    padding:70px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:2.3rem;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1rem;
+    color:var(--muted);
+}
+
+/* NAV */
+nav{
+    background:linear-gradient(90deg,var(--surface),#1a2250);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.7);
+}
+
+nav a{
+    margin:6px 18px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    transition:.3s;
+}
+
+nav a:hover::after{width:100%}
+
+/* SECTIONS */
+section{
+    max-width:1300px;
+    margin:auto;
+    padding:85px 20px;
+}
+
+section:nth-child(even){
+    background:rgba(255,255,255,0.03);
+}
+
+h2{
+    font-size:2.2rem;
+    margin-bottom:28px;
+    position:relative;
+    color:var(--accent);
+}
+
+h2::after{
+    content:'';
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    position:absolute;
+    bottom:-12px;
+    left:0;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:32px;
+    margin-top:40px;
+}
+
+/* CARD */
+.card{
+    background:linear-gradient(145deg,var(--card),#222c66);
+    border-radius:18px;
+    padding:32px;
+    box-shadow:0 22px 50px rgba(0,0,0,.75);
+    transition:.35s;
+    border-top:4px solid var(--primary);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:var(--secondary);
+    margin-bottom:12px;
+}
+
+/* FACILITIES */
+.facilities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+    gap:40px;
+    margin-top:45px;
+}
+
+.facilities img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 28px 60px rgba(0,0,0,.9);
+    transition:.4s;
+}
+
+.facilities img:hover{
+    transform:scale(1.05);
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:35px;
+    background:linear-gradient(145deg,var(--card),#222c66);
+    border-radius:16px;
+    overflow:hidden;
+}
+
+th,td{
+    padding:18px;
+    border-bottom:1px solid #2f3b8f;
+}
+
+th{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    color:#000;
+}
+
+/* LINKS */
+.links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:34px;
+    margin-top:35px;
+}
+
+.link-card{
+    background:linear-gradient(145deg,var(--card),#243072);
+    padding:32px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.8);
+}
+
+.link-card h3{
+    color:var(--primary);
+}
+
+.link-card a{
+    display:inline-block;
+    margin-top:16px;
+    padding:10px 24px;
+    border-radius:30px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.link-card a:hover{
+    opacity:.9;
+}
+
+/* FOOTER */
+footer{
+    background:linear-gradient(90deg,var(--surface),#1a2250);
+    color:var(--muted);
+    text-align:center;
+    padding:34px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header h1{font-size:1.9rem}
+    .facilities img{height:250px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Amal Jyothi College of Engineering</h1>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#product">Product</a>
+<a href="#price">Price</a>
+<a href="#place">Place</a>
+<a href="#promotion">Promotion</a>
+<a href="#analysis">Analysis</a>
+<a href="#conclusion">Conclusion</a>
+</nav>
+
+<section id="home">
+<h2>Introduction</h2>
+<p>
+This webpage presents a professional marketing mix case study of
+<strong>Amal Jyothi College of Engineering (AJCE)</strong> using the
+<strong>4Ps framework – Product, Price, Place, and Promotion</strong>.
+</p>
+</section>
+
+<section id="product">
+<h2>Product – Academic & Non-Academic Offerings</h2>
+<div class="grid">
+<div class="card"><h3>Academic Programs</h3><p>Autonomous UG, PG and PhD programs aligned with industry needs.</p></div>
+<div class="card"><h3>Faculty</h3><p>Highly qualified faculty with strong mentoring support.</p></div>
+<div class="card"><h3>Infrastructure</h3><p>Smart classrooms, advanced laboratories and innovation hubs.</p></div>
+<div class="card"><h3>Student Services</h3><p>Placements, internships, clubs and professional certifications.</p></div>
+</div>
+</section>
+
+<section id="price">
+<h2>Price – Fee Structure</h2>
+<table>
+<tr><th>Component</th><th>Cost (INR)</th></tr>
+<tr><td>Tuition Fees</td><td>75,000 – 1,25,000</td></tr>
+<tr><td>Hostel & Mess</td><td>45,000 – 65,000</td></tr>
+<tr><td>Exams & Labs</td><td>8,000 – 15,000</td></tr>
+</table>
+</section>
+
+<section id="place">
+<h2>Place – Location & Service Delivery</h2>
+<ul>
+<li>Located at Kanjirappally, Kerala with good connectivity</li>
+<li>Peaceful eco-friendly campus</li>
+<li>Hybrid learning through LMS and smart classrooms</li>
+<li>Well-organized campus layout</li>
+</ul>
+</section>
+
+<section>
+<h2>Campus Facilities</h2>
+<div class="facilities">
+    <img src="https://i.ytimg.com/vi/SCGihyVp2bY/maxresdefault.jpg" alt="AJCE Campus">
+    <img src="https://www.amaljyothi.ac.in/staffprofile/images/au_home.jpg" alt="AJCE Laboratory">
+    <img src="https://www.ajce.in/mt/images/slider_05.jpg" alt="AJCE Classroom">
+    <img src="https://www.amaljyothi.ac.in/staffprofile/images/lib_home.jpg" alt="AJCE Library">
+    <img src="https://www.ajce.in/mt/images/slider_01.jpg" alt="AJCE Hostel">
+    <img src="https://ajce.in/home/images/hostel-slider_02.jpg" alt="AJCE Sports Facilities">
+</div>
+</section>
+
+
+<section id="promotion">
+<h2>Promotion – Branding</h2>
+<div class="links">
+<div class="link-card"><h3>Official Website</h3><a href="https://www.amaljyothi.ac.in" target="_blank">Visit Website</a></div>
+<div class="link-card"><h3>Instagram</h3><a href="https://www.instagram.com/nammude_ajce/" target="_blank">View Instagram</a></div>
+<div class="link-card"><h3>YouTube</h3><a href="https://www.youtube.com/@AmalJyothiCollege" target="_blank">Watch Videos</a></div>
+</div>
+</section>
+
+<section id="analysis">
+<h2>Analysis</h2>
+<ul>
+<li>Strong academic quality and placements</li>
+<li>Excellent infrastructure</li>
+<li>Needs stronger global digital promotion</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2>Suggestions & Conclusion</h2>
+<ol>
+<li>Improve international branding</li>
+<li>Use student success stories</li>
+<li>Highlight placement statistics</li>
+</ol>
+</section>
+
+<footer>
+<p>© 2026 Amal Jyothi College of Engineering</p>
+</footer>
+
+</body>
+</html>
